@@ -7,9 +7,27 @@
 
         <body>
             <h1> Osmosis Liquidity pool Annual Percentage Rate analysis</h1>
-
-            data data
+            <h2> Please Enter the Osmosis Liquidity Pool you would like to see data for </h2>
+            
+            <form> 
+                <select name="pool_list">
+                {% for name in name_list %}
+                
+                <option value="{{ name }}"> {{ name }}</option>
+                           
+                {% endfor %}
+            </select>
+            </form>
+            <div>
+                ---------------------------<br>
+                -------example plot----<br>
+                ---------------------------
+            </div>
         </body>
 
 
+        <footer>
+            Data accumulated using my APR logger(repo found <a href='https://github.com/logical1862/OSMO_logger'>here</a>) <br>
+            That makes daily calls to the 'https://api-osmosis.imperator.co/pairs/v1/summary' API end point
+        </footer>
     </html>
