@@ -9,19 +9,18 @@
             <h1> Osmosis Liquidity pool Annual Percentage Rate analysis</h1>
             <h2> Please Enter the Osmosis Liquidity Pool you would like to see data for </h2>
             
-            <form> 
+            <form method="POST"> 
+                <input type="submit">
                 <select name="pool_list">
                 {% for name in name_list %}
                 
-                <option value="{{ name }}"> {{ name }}</option>
+                <option value="{{ name[0] }}"> {{ name[0] }}</option>
                            
                 {% endfor %}
             </select>
             </form>
             <div>
-                ---------------------------<br>
-                -------example plot----<br>
-                ---------------------------
+                <img src="{{ img_path }}">
             </div>
         </body>
 
