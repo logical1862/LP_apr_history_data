@@ -1,0 +1,16 @@
+
+.defaultBackground {
+    background-color: rgb(65, 8, 126);
+}
+
+.MainBody {
+    background-color: lightslategray;
+    width: 100%;
+    justify-items: center;
+    vertical-align: middle;
+}
+
+.plotimage {
+    justify-content: right;
+    justify-items: center;
+}
