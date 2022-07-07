@@ -31,7 +31,7 @@ def save_plot_image(df:pd.DataFrame, file_name:str):
 
 if __name__ == '__main__':
 
-    path = R'dashboard_site\static\function_test_sample_files\AKT_ATOM.csv'
+    path = R'dashboard_site\static\function_test_sample_files\AKT_OSMO.csv'
     file_name = path[49:-3]
     df = pd.read_csv(path)
     
