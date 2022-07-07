@@ -26,12 +26,12 @@ ORDER BY name;
     initial_img_path = R"\static\function_test_sample_files\AKT_ATOM.png"
 
     # post should happen when submit button is clicked to view different pool plots
-    if request.method == 'post':
-       pool_plot_img_selection = request.form('pool_list')
+    if request.method == 'POST':
+       pool_plot_img_selection = request.form['pool_selection']
 
       # TODO set path to selected pool in '\static\plot_imgs\'
 
-       img_path = "\static\function_test_sample_files\{}.png".format(pool_plot_img_selection)
+       img_path = "\\static\\function_test_sample_files\\{}.png".format(pool_plot_img_selection)
        return render_template('index.html', name_list=name_list, img_path=img_path)
    # page first load
     return render_template('index.html', name_list=name_list, img_path=initial_img_path)
