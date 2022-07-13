@@ -3,26 +3,26 @@
         <head>
             <title>LP APR Visual test</title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
             <link rel="stylesheet" type="text/css" href="static\styles.css"  />
         </head>
 
 
         <body>
+            <center>
             <div class="MainBody" > 
             <h1> Osmosis Liquidity pool Annual Percentage Rate analysis</h1>
             <h2> Please Enter the Osmosis Liquidity Pool you would like to see data for </h2>
             
             <form method="POST" action=""> 
-                <input type="submit">
-                <select name="pool_list" name="pool_selection">
+                <button type="submit">Select pool</button> 
+                <select name="pool_selection">
                 {% for name in name_list %}
                 
                 <option value="{{ name[0] }}"> {{ name[0] }}</option>
                            
                 {% endfor %}
             </select>
-            <center> </form>
+             </form>
             <div>
                 <img src="{{ img_path }}">
             </div>

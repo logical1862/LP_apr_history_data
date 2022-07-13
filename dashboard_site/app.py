@@ -27,7 +27,7 @@ ORDER BY name;
 
     # post should happen when submit button is clicked to view different pool plots
     if request.method == 'POST':
-       pool_plot_img_selection = request.form['pool_selection']
+       pool_plot_img_selection = request.form.get('pool_selection')
 
       # TODO set path to selected pool in '\static\plot_imgs\'
 
