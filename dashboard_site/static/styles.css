@@ -1,16 +1,36 @@
 
 .defaultBackground {
-    background-color: rgb(65, 8, 126);
+    background-color: rgb(108, 29, 142);
 }
 
 .MainBody {
     background-color: lightslategray;
+    border: 3px groove black;
     width: 100%;
-    justify-items: center;
-    vertical-align: middle;
+    position: center;
 }
 
 .plotimage {
-    justify-content: right;
-    justify-items: center;
+    width: 100%;
+}
+
+.officialOSMOlinks {
+    list-style-type: none;
+    font-size: small;
+}
+
+.listoflinks {
+    float: right;
+   
+}
+.linkLogos {
+    width: 65px;
+}
+.footerLinks {
+    border: 10px double black;
+    padding: 15px;
+    margin: auto;
+    background-color: rgb(75, 31, 205);
+    font-style: italic;
+    
 }
