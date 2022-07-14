@@ -2,6 +2,7 @@
 
 
 
+from matplotlib.transforms import Bbox
 import pandas as pd
 import seaborn as sns
 from matplotlib import pyplot as plt
@@ -21,18 +22,20 @@ def save_plot_image(df:pd.DataFrame, file_name:str):
     plt.xlabel('Date of Record')
     plt.ylabel('Pool Reward Annual Percentage Rate') 
     plt.xticks(rotation=45)
-    # TODO set correct folder path
-    test_plot_folder = 'dashboard_site\\static\\function_test_sample_files\\'
+    
+    # test_plot_folder = 'static\\function_test_sample_files\\'
 
-    # plot_folder = 
-    plt.savefig('{}{}'.format(test_plot_folder, file_name))
+    plot_folder = 'static\\plot_imgs\\'
+
+    #remove excess whitespace around image and save
+    plt.savefig('{}{}'.format(plot_folder, file_name), bbox_inches='tight')
     # plt.show()
 
 
 if __name__ == '__main__':
 
-    path = R'dashboard_site\static\function_test_sample_files\AKT_OSMO.csv'
-    file_name = path[49:-3]
-    df = pd.read_csv(path)
+    csv_path = R'dashboard_site\static\function_test_sample_files\AKT_OSMO.csv'
+    file_name = csv_path[49:-3]
+    df = pd.read_csv(csv_path)
     
     save_plot_image(df, file_name)
