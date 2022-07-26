@@ -1,15 +1,10 @@
 # functions for site
 
-
-
-from matplotlib.transforms import Bbox
 import pandas as pd
 import seaborn as sns
 from matplotlib import pyplot as plt
 
 def save_plot_image(df:pd.DataFrame, file_name:str):
-
-    # TODO automagically run script once per day to update plot images
     
     sns.set_style('darkgrid')
     plt.figure(figsize=(15, 10))
@@ -29,7 +24,6 @@ def save_plot_image(df:pd.DataFrame, file_name:str):
 
     #remove excess whitespace around image and save
     plt.savefig('{}{}'.format(plot_folder, file_name), bbox_inches='tight')
-    # plt.show()
 
 
 if __name__ == '__main__':
