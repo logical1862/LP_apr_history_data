@@ -32,6 +32,17 @@
                 <div class="poolTableBody"> 
             <h1> Osmosis Liquidity pool Annual Percentage Rate</h1>
             <h2> Please Enter the Osmosis Liquidity Pool you would like to see data for </h2>
+
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul class=flashes>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+
             
             <form method="POST" action=""> 
                 <button type="submit">Select pool</button> 

@@ -20,7 +20,7 @@ def save_plot_image(df:pd.DataFrame, file_name:str):
     
     # test_plot_folder = 'static\\function_test_sample_files\\'
 
-    plot_folder = 'static\\plot_imgs\\'
+    plot_folder = 'static/plot_imgs/'
 
     #remove excess whitespace around image and save
     plt.savefig('{}{}'.format(plot_folder, file_name), bbox_inches='tight')
@@ -28,7 +28,7 @@ def save_plot_image(df:pd.DataFrame, file_name:str):
 
 if __name__ == '__main__':
 
-    csv_path = R'dashboard_site\static\function_test_sample_files\AKT_OSMO.csv'
+    csv_path = R'dashboard_site/static/function_test_sample_files/AKT_OSMO.csv'
     file_name = csv_path[49:-3]
     df = pd.read_csv(csv_path)
     
