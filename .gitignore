@@ -1,3 +1,7 @@
 
 *.pyc
 dashboard_site/static/function_test_sample_files/KT_ATOM.png
+update_LP_apr_csv/lambda_function.py
+update_LP_apr_csv/update_LP_apr_csv/lambda_function.py
+*.zip
+*.png

@@ -1,0 +1,23 @@
+# Process, notes, and changes concerning the feature: connection to S3
+
+### the purpose of this branch is to establish a working connection to an existing AWS S3 Bucket
+
+The current pool_apr.db is only for development and lacks automation of data processes. The S3 bucket connection will be to the same one updated daily by a AWS Lambda service to allow for up to date data visualization.
+
+
+changes:
+
+-create public url for S3 object 'pool_apr.db' via AWS web console
+-define functions to check / update apps current working version of database
+---checks for date creation of database vs time now in epoch time. if older than 1 day, removes current database and downloads current from s3 bucket url
+-restructure index route to allow for database update functions
+
+
+new imports:
+-datetime
+-wget
+-os
+
+
+KNOWN ISSUES:
+-exception thrown when index.html accessed in tandum with database update. Need to restructure / multithread / return apology.html
