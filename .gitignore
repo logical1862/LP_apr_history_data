@@ -5,3 +5,5 @@ update_LP_apr_csv/lambda_function.py
 update_LP_apr_csv/update_LP_apr_csv/lambda_function.py
 *.zip
 *.png
+*.csv
+*/settings.json
