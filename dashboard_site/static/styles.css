@@ -1,4 +1,6 @@
-
+body {
+    max-width: 80ch;
+}
 .defaultBackground {
     background-color: rgb(108, 29, 142);
 }
@@ -11,7 +13,8 @@
 }
 
 .plotimage {
-    width: 100%;
+    position: fixed;
+    width: 90%;
 }
 
 .officialOSMOlinks {
